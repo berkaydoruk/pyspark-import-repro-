@@ -11,7 +11,7 @@ dependencies = []
 [project.optional-dependencies]
 
 dev_normal = [
-  "pyspark==3.5.2",
+  "pyspark==3.5.2; platform_system != 'Linux'"
   "pytest",
   "pytest-cov",
   "databricks-bundles==0.281.0",
@@ -25,7 +25,7 @@ dev_dlt_first = [
   "pytest-cov",
   "databricks-bundles==0.281.0",
   "mlflow>=2.19.0",
-  "pyspark==3.5.2",
+  "pyspark==3.5.2; platform_system != 'Linux'",
 ]
 
 dev_no_spark = [
@@ -35,12 +35,6 @@ dev_no_spark = [
   "mlflow>=2.19.0",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.uv.pip]
-no-binary = ["pyspark"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }

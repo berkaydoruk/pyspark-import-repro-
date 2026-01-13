@@ -16,7 +16,7 @@ jobs:
         run: pip install uv
 
       - name: Install dependencies
-        run: uv pip install -e ".[dev_dlt_first]"
+        run: uv pip install --system -e ".[dev_dlt_first]"
 
       - name: Run demo
         run: uv run python -m demo_app.main

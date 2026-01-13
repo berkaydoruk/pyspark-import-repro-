@@ -35,6 +35,10 @@ dev_no_spark = [
   "mlflow>=2.19.0",
 ]
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [tool.uv.pip]
 no-binary = ["pyspark"]
 

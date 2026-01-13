@@ -11,7 +11,7 @@ dependencies = []
 [project.optional-dependencies]
 
 dev_normal = [
-  "pyspark==3.5.2",
+  "pyspark==4.1.0",
   "pytest",
   "pytest-cov",
   "mlflow>=2.19.0",
@@ -21,7 +21,7 @@ dev_dlt_first = [
   "pytest",
   "pytest-cov",
   "mlflow>=2.19.0",
-  "pyspark==3.5.2",
+  "pyspark==4.1.0",
 ]
 
 dev_no_spark = [

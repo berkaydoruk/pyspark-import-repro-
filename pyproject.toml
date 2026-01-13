@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyspark-import-repro"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+
+# CASE A
+dev_normal = [
+    "pytest",
+    "pytest-cov",
+    "databricks-bundles==0.281.0",
+    "mlflow>=2.19.0",
+    "pyspark==3.5.2",
+    "databricks-dlt",
+]
+
+# CASE B (sıra farkı)
+dev_dlt_first = [
+    "databricks-dlt",
+    "pytest",
+    "pytest-cov",
+    "databricks-bundles==0.281.0",
+    "mlflow>=2.19.0",
+    "pyspark==3.5.2",
+]
+
+# CASE C (pyspark core dependency)
+dev_no_spark = [
+    "pytest",
+    "pytest-cov",
+    "databricks-bundles==0.281.0",
+    "mlflow>=2.19.0",
+]
+
+[project.dependencies]
+# CASE C: pyspark her zaman yüklü
+pyspark = "==3.5.2"

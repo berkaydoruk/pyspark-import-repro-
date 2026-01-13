@@ -1,0 +1,9 @@
+# PySpark Import Order Reproduction
+
+This repository demonstrates an import-order dependent behavior in
+PySpark 3.5.2 when combined with databricks-dlt.
+
+All workflows run on:
+- Ubuntu 24.04 LTS
+- Python 3.11
+- uv

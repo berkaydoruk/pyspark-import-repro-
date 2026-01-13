@@ -19,4 +19,4 @@ jobs:
         run: uv pip install --system -e ".[dev_dlt_first]"
 
       - name: Run demo
-        run: uv run python -m demo_app.main
+        run: python -m demo_app.main

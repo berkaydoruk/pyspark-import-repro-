@@ -9,7 +9,6 @@ requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
-
 dev_normal = [
   "pytest",
   "pytest-cov",
@@ -28,5 +27,15 @@ dev_dlt_first = [
   "pyspark==3.5.2",
 ]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/demo_app"]
+dev_no_spark = [
+  "pytest",
+  "pytest-cov",
+  "databricks-bundles==0.281.0",
+  "mlflow>=2.19.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

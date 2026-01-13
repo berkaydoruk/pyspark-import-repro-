@@ -14,12 +14,16 @@ dev_normal = [
   "pyspark==4.1.0",
   "pytest",
   "pytest-cov",
+  "databricks-bundles==0.281.0",
   "mlflow>=2.19.0",
+  "databricks-dlt",
 ]
 
 dev_dlt_first = [
+  "databricks-dlt",
   "pytest",
   "pytest-cov",
+  "databricks-bundles==0.281.0",
   "mlflow>=2.19.0",
   "pyspark==4.1.0",
 ]

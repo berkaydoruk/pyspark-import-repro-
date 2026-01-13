@@ -28,8 +28,5 @@ dev_dlt_first = [
   "pyspark==3.5.2",
 ]
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/demo_app"]

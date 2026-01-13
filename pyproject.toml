@@ -11,7 +11,7 @@ dependencies = []
 [project.optional-dependencies]
 
 dev_normal = [
-  "pyspark==3.5.2; platform_system != 'Linux'"
+  "pyspark==3.5.2; platform_system != 'Linux'",
   "pytest",
   "pytest-cov",
   "databricks-bundles==0.281.0",

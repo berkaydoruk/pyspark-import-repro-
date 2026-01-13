@@ -6,10 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "pyspark-import-repro"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = ["pyspark==3.5.2"]
+dependencies = []
 
 [project.optional-dependencies]
 dev_normal = [
+  "pyspark==3.5.2",
   "pytest",
   "pytest-cov",
   "databricks-bundles==0.281.0",

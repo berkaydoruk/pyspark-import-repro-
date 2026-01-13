@@ -35,7 +35,7 @@ dev_no_spark = [
   "mlflow>=2.19.0",
 ]
 
-[tool.uv]
+[tool.uv.pip]
 no-binary = ["pyspark"]
 
 [tool.setuptools]
